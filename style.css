@@ -1,69 +1,70 @@
- 
+/* Estilo general */
+body {
+  background: #1d2671;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #c33764, #1d2671);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #c33764, #1d2671); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #fff;
+}
 
+.calculator {
+  background: #2c3e50;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
 
-  body {
-    background: #DA4453;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #89216B, #DA4453);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #89216B, #DA4453); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.calculator h1 {
+  margin-bottom: 20px;
+}
 
-  }
+input[type="number"] {
+  width: calc(50% - 10px);
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
 
+button {
+  padding: 10px;
+  margin: 5px;
+  width: calc(25% - 10px);
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-  @media(max-width: 570px) {
-    body {
-      background: #00F260;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+button:hover {
+  background-color: #c0392b;
+}
 
-      font-size: 15px;
-      font-family: 'Poppins'; 
-      place-content: center;
-  }
-  
- }
+#resultado {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+@media (max-width: 600px) {
   .calculator {
-    margin: auto;
+      padding: 10px;
   }
-  
+
   input[type="number"] {
-    width: 200px;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 20px;
+      width: calc(100% - 20px);
   }
-  
+
   button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 20px;
+      width: calc(50% - 10px);
   }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  section {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    height: 350px;
-  }
-  
-  #resultado, #resultado2, #resultado3 {
-    color: #323232;
-    font-size: 30px;
-  }
-  
-  .div2 {
-    display: flex;
-  }
-  .div2a, .div2b {
-    width: 50%;
-  }
-  .div2a {
-    background-color: rgb(212, 212, 212);
-    border-radius: 30px;
-  }
+}
